@@ -22,6 +22,47 @@ article{max-width:950px}.article-head{display:flex;justify-content:space-between
 .mobilebar{display:none}.menuoverlay{display:none}.related{display:flex;gap:7px;flex-wrap:wrap;margin:28px 0}.related .tag{background:var(--panel)}.faq{padding:14px 0;border-bottom:1px solid var(--line)}.faq p{margin:5px 0}.check{display:flex;gap:9px;padding:6px 0}.check input{accent-color:#d0b57b}
 @media(max-width:980px){.layout{grid-template-columns:245px minmax(0,1fr)}main{padding:25px 25px 70px}.cards{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:730px){.layout{display:block}.mobilebar{display:flex;position:sticky;z-index:20;top:0;align-items:center;gap:13px;background:#0b171beb;padding:10px 14px;border-bottom:1px solid var(--line);backdrop-filter:blur(15px)}.mobilebar button{width:40px;height:40px;border-radius:10px;background:#243b41;border:1px solid #41626a;color:var(--ink)}.mobilebar strong{font:600 17px Georgia,serif}.mobilebar small{margin-left:auto;color:var(--gold);font-size:10px}aside{position:fixed;z-index:32;top:0;left:0;height:100dvh;width:min(85vw,330px);transform:translateX(-100%);transition:transform .2s ease;box-shadow:15px 0 45px #0009}aside.open{transform:translateX(0)}.menuoverlay.open{display:block;position:fixed;z-index:30;inset:0;background:#0009}main{padding:20px 17px 70px}.top{font-size:10px}.hero{margin:20px 0;padding:23px 20px}.hero h1{font-size:36px}.cards{grid-template-columns:repeat(2,1fr);gap:8px}.card{padding:13px}.article-head h2{font-size:30px}.content table{display:block;max-width:100%;overflow-x:auto}.content th,.content td{min-width:120px;padding:9px}.content h3{font-size:22px}.tool{font-size:11px;padding:7px}.save{font-size:12px}}
+
+/* illustrated bestiary and equipment guide */
+.catalog-toolbar{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin:14px 0 18px}
+.catalog-toolbar input,.catalog-toolbar select{flex:1;min-width:150px;border:1px solid #466168;background:#142b31;color:#eaf2ed;border-radius:9px;padding:10px}
+.catalog-count{font-size:12px;color:var(--gold);margin-bottom:13px}
+.enemy-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:12px 0 30px}
+.enemy-card{background:#112228;border:1px solid #385055;border-radius:13px;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:transform .15s,border-color .15s}
+.enemy-card:hover{border-color:#8a8e77;transform:translateY(-2px)}
+.enemy-cover{height:150px;background:radial-gradient(circle at 50% 10%,#385448,#13242a 65%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.enemy-cover img{height:100%;width:100%;object-fit:cover}
+.enemy-icon{font:700 63px Georgia,serif;color:#a8bba16c}
+.enemy-card .enemy-photo-note{position:absolute;left:0;right:0;bottom:0;padding:6px 10px;font-size:10px;color:#e0e6dc;background:linear-gradient(transparent,#071112db);text-shadow:0 1px #000}
+.enemy-card-body{padding:13px 14px;display:flex;gap:7px;flex-direction:column;flex:1}
+.enemy-card h4{font:600 19px/1.22 Georgia,serif;color:#efe7d8;margin:2px 0 5px}
+.enemy-role{font-size:10px;color:#a6c4bf;text-transform:uppercase;letter-spacing:.08em}
+.enemy-danger{display:inline-flex;font-size:10px;width:max-content;padding:2px 7px;border-radius:50px;border:1px solid #65735a;color:#ccdcba}
+.enemy-danger.high{border-color:#927a4d;color:#efd0a0}.enemy-danger.critical{border-color:#994f4b;color:#ffb6ac}
+.enemy-card p{font-size:12px;line-height:1.5;margin:0;color:#cbd9d2}
+.enemy-card p strong{font-size:11px;color:var(--gold)}
+.enemy-card-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:8px}
+.enemy-card-actions a{font-size:11px;color:var(--cyan);text-decoration:none;border:1px solid #426066;border-radius:6px;padding:6px 8px}
+.enemy-card[hidden]{display:none!important}
+.kit-panel{margin:22px 0 26px;padding:17px;border:1px solid #555d48;border-radius:14px;background:linear-gradient(145deg,#1c3031,#14252b)}
+.kit-header{display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:13px}
+.kit-header h3{font:600 25px Georgia,serif;color:var(--gold);margin:0}
+.kit-header p{font-size:12px;color:#c4d2ce;margin:4px 0}
+.kit-priority{font-size:12px;background:#2a3e35;border:1px solid #4e7760;border-radius:8px;padding:8px 10px;color:#d9f0d5}
+.kit-slots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.kit-slot{padding:15px;background:#122127;border:1px solid #31494f;border-radius:11px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.kit-slot .slot-type{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:#a7c0b7}
+.kit-slot h4{font:600 20px/1.2 Georgia,serif;color:#f1e4cb;margin:0}
+.kit-slot p{color:#d0dcd7;font-size:13px;line-height:1.48;margin:0}
+.kit-alt{font-size:12px;color:#bacac4;border-top:1px solid #2b4348;padding-top:9px;margin-top:auto}
+.kit-slot a{font-size:12px;text-decoration:none;margin-top:3px}
+.kit-note{font-size:13px;line-height:1.5;background:#2a3029;border-left:3px solid #dab981;padding:11px 12px;margin-top:12px;color:#e7e0cc}
+.kit-legend{color:#aebeb9;font-size:12px;margin-top:8px}
+@media(max-width:1180px){.enemy-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.kit-slots{grid-template-columns:1fr}}
+@media(max-width:480px){.enemy-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.enemy-cover{height:115px}.enemy-card-body{padding:10px}.enemy-card h4{font-size:16px}.enemy-card-actions a{padding:4px 6px}.kit-panel{padding:12px}.kit-header h3{font-size:22px}}
+@media(max-width:355px){.enemy-grid{grid-template-columns:1fr}.enemy-cover{height:180px}}
+
 </style>
 </head>
 <body>
@@ -51,9 +92,31 @@ function activeNav(){nav.querySelectorAll(".navbtn").forEach(el=>el.classList.to
 function currentId(){return decodeURIComponent(location.hash.slice(1).split("?")[0])||"start"}
 function sourceList(refsIn){return refsIn?.length?'<div class="source-links"><h4>Источники и дополнительные материалы</h4>'+refsIn.map(k=>refs[k]?'<a target="_blank" rel="noopener noreferrer" href="'+escapeHTML(refs[k].url)+'">↗ '+escapeHTML(refs[k].name)+'</a>':'').join("")+'</div>':""}
 function related(a){const same=articles.filter(x=>x.id!==a.id&&(x.group===a.group||x.tags?.some(t=>a.tags?.includes(t)))).slice(0,5);return same.length?'<div class="related">'+same.map(x=>'<a class="tag" href="#'+encodeURIComponent(x.id)+'">'+escapeHTML(x.title)+' ↗</a>').join("")+'</div>':""}
-function articleView(a){return '<article><div class="article-head"><div><div class="article-meta">'+escapeHTML(a.group)+'</div><h2>'+escapeHTML(a.title)+'</h2><p>'+escapeHTML(a.summary||"")+'</p></div><button id="bookmark" class="save '+(saved(a.id)?"saved":"")+'">'+(saved(a.id)?"★ Сохранено":"☆ Сохранить")+'</button></div><div class="content">'+a.body+'</div>'+sourceList(a.refs)+related(a)+'</article>'}
+function loadoutView(id){
+ const x=(window.CLASS_LOADOUTS||{})[id];if(!x)return "";
+ const slots=x.slots.map(([type,name,desc,alt,slug])=>'<section class="kit-slot"><span class="slot-type">'+escapeHTML(type)+'</span><h4>'+escapeHTML(name)+'</h4><p>'+escapeHTML(desc)+'</p><div class="kit-alt"><b>Замена:</b> '+escapeHTML(alt)+'</div><a href="https://chaosgate.fandom.com/wiki/Special:Search?query='+encodeURIComponent(name.split(" III")[0].split(" II")[0].split(" I")[0])+'" target="_blank" rel="noopener noreferrer">Найти предмет на Wiki ↗</a></section>').join("");
+ return '<div class="kit-panel"><div class="kit-header"><div><h3>✠ Лучшая экипировка</h3><p>'+escapeHTML(x.subtitle)+'</p></div><div class="kit-priority">Приоритет: '+escapeHTML(x.priority)+'</div></div><div class="kit-slots">'+slots+'</div><div class="kit-note">'+escapeHTML(x.note)+'</div><p class="kit-legend">Именные вещи Tier II–III не гарантированы. Ищи свойства, а не только название; ссылки ведут к поиску предмета в Chaos Gate Wiki.</p></div>';
+}
+function enemyCatalogView(){
+ const c=window.ENEMY_CARDS||[];
+ const glyph={"Культисты":"☣","Death Guard":"✠","Демоны":"☠","Техника":"⚙","Bloomspawn":"✣"};
+ const cards=c.map((x,i)=>{
+  const image=x.image?'<img src="'+escapeHTML(x.image)+'" loading="lazy" alt="'+escapeHTML(x.name)+'" referrerpolicy="no-referrer"><span class="enemy-photo-note">'+escapeHTML(x.caption||"Иллюстрация")+'</span>':'<span class="enemy-icon" aria-hidden="true">'+(glyph[x.group]||"✠")+'</span><span class="enemy-photo-note">Нет проверенного изображения</span>';
+  const threatClass=x.threat==="Критическая"?"critical":x.threat==="Высокая"?"high":"";
+  const link=x.local?'<a href="#'+escapeHTML(x.local)+'">Разбор тактики ↗</a>':'';
+  return '<div class="enemy-card" data-enemy-group="'+escapeHTML(x.group)+'" data-enemy-threat="'+escapeHTML(x.threat)+'" data-enemy-search="'+escapeHTML((x.name+" "+x.ability+" "+x.counter).toLowerCase())+'"><div class="enemy-cover">'+image+'</div><div class="enemy-card-body"><span class="enemy-role">'+escapeHTML(x.group)+'</span><h4>'+escapeHTML(x.name)+'</h4><span class="enemy-danger '+threatClass+'">'+escapeHTML(x.threat)+' угроза</span><p><strong>Опасность:</strong> '+escapeHTML(x.ability)+'</p><p><strong>Контра:</strong> '+escapeHTML(x.counter)+'</p><div class="enemy-card-actions">'+link+'<a href="'+escapeHTML(x.url)+'" target="_blank" rel="noopener noreferrer">Описание в Wiki ↗</a></div></div></div>';
+ }).join("");
+ return '<div class="catalog-toolbar"><input id="enemyFilter" type="search" placeholder="Найти моба / способность…" aria-label="Поиск по врагам"><select id="enemyGroup" aria-label="Категория врага"><option value="">Все категории</option>'+[...new Set(c.map(x=>x.group))].map(x=>'<option>'+escapeHTML(x)+'</option>').join("")+'</select><select id="enemyThreat" aria-label="Опасность"><option value="">Любая опасность</option><option>Критическая</option><option>Высокая</option><option>Средняя</option><option>Низкая</option></select></div><div id="enemyCount" class="catalog-count">'+c.length+' противников · '+c.filter(x=>x.image).length+' изображений с указанным источником</div><div class="enemy-grid">'+cards+'</div>';
+}
+function initCatalog(){
+ const input=document.getElementById("enemyFilter"),group=document.getElementById("enemyGroup"),threat=document.getElementById("enemyThreat");if(!input)return;
+ const update=()=>{const needle=input.value.toLocaleLowerCase("ru").trim(),g=group.value,t=threat.value;let n=0;document.querySelectorAll(".enemy-card").forEach(card=>{const ok=(!g||card.dataset.enemyGroup===g)&&(!t||card.dataset.enemyThreat===t)&&(!needle||card.dataset.enemySearch.includes(needle));card.hidden=!ok;if(ok)n++});document.getElementById("enemyCount").textContent=n+" из "+(window.ENEMY_CARDS||[]).length+" противников"};
+ [input,group,threat].forEach(e=>{e.addEventListener("input",update);e.addEventListener("change",update)});
+ document.querySelectorAll(".enemy-cover img").forEach(img=>img.addEventListener("error",()=>{const cover=img.parentElement;cover.innerHTML='<span class="enemy-icon" aria-hidden="true">✠</span><span class="enemy-photo-note">Изображение недоступно · открой Wiki</span>'},{once:true}))
+}
+function articleView(a){return '<article><div class="article-head"><div><div class="article-meta">'+escapeHTML(a.group)+'</div><h2>'+escapeHTML(a.title)+'</h2><p>'+escapeHTML(a.summary||"")+'</p></div><button id="bookmark" class="save '+(saved(a.id)?"saved":"")+'">'+(saved(a.id)?"★ Сохранено":"☆ Сохранить")+'</button></div>'+loadoutView(a.id)+'<div class="content">'+a.body.replace('<div id="enemyCatalog"></div>',enemyCatalogView())+'</div>'+sourceList(a.refs)+related(a)+'</article>'}
 function listView(items,title,desc){return '<article><div class="article-meta">Полевой кодекс</div><h2 style="font:600 34px Georgia,serif;color:var(--gold)">'+escapeHTML(title)+'</h2><p style="color:var(--muted)">'+escapeHTML(desc)+'</p><div class="searchresults">'+items.map(a=>'<a class="result" href="#'+a.id+'"><small>'+escapeHTML(a.group)+'</small><b>'+escapeHTML(a.title)+'</b><small>'+escapeHTML(a.summary||"")+'</small></a>').join("")+(items.length?"":'<p>Ничего не найдено. Попробуй другое слово.</p>')+'</div></article>'}
-function route(){const id=currentId(),a=byId[id],fav=id==="_bookmarks";document.getElementById("homeHero").style.display=id==="start"?"block":"none";document.getElementById("homeStats").style.display=id==="start"?"grid":"none";document.getElementById("breadcrumbs").innerHTML=id==="start"?"":'<a href="#start">Главная</a> / '+(fav?"Избранное":escapeHTML(a?.title||"Поиск"));render.innerHTML=a?articleView(a):fav?listView(articles.filter(x=>saved(x.id)),"Избранное","Сохранённые статьи доступны здесь."):listView(articles,"Все статьи","Выбери раздел в навигации.");document.title=(a?a.title+" — ":"")+"Полевой кодекс · Chaos Gate";const b=document.getElementById("bookmark");if(b)b.onclick=()=>toggle(id);activeNav();window.scrollTo({top:0,behavior:"instant"})}
+function route(){const id=currentId(),a=byId[id],fav=id==="_bookmarks";document.getElementById("homeHero").style.display=id==="start"?"block":"none";document.getElementById("homeStats").style.display=id==="start"?"grid":"none";document.getElementById("breadcrumbs").innerHTML=id==="start"?"":'<a href="#start">Главная</a> / '+(fav?"Избранное":escapeHTML(a?.title||"Поиск"));render.innerHTML=a?articleView(a):fav?listView(articles.filter(x=>saved(x.id)),"Избранное","Сохранённые статьи доступны здесь."):listView(articles,"Все статьи","Выбери раздел в навигации.");document.title=(a?a.title+" — ":"")+"Полевой кодекс · Chaos Gate";const b=document.getElementById("bookmark");if(b)b.onclick=()=>toggle(id);initCatalog();activeNav();window.scrollTo({top:0,behavior:"instant"})}
 function doSearch(){const q=search.value.toLocaleLowerCase("ru").trim();if(!q){route();return}const parts=q.split(/\s+/);const matches=articles.map(a=>({a,hay:[a.title,a.summary,a.group,...(a.tags||[]),plain(a.body)].join(" ").toLocaleLowerCase("ru")})).filter(x=>parts.every(w=>x.hay.includes(w))).map(x=>x.a);document.getElementById("homeHero").style.display="none";document.getElementById("homeStats").style.display="none";document.getElementById("breadcrumbs").textContent="Поиск по вики";render.innerHTML=listView(matches,'Результаты поиска: «'+q+'»',matches.length+' статей найдено');}
 search.addEventListener("input",doSearch);window.addEventListener("hashchange",()=>{search.value="";route()});
 function closeMenu(){aside.classList.remove("open");veil.classList.remove("open")}document.getElementById("menuButton").onclick=()=>{aside.classList.toggle("open");veil.classList.toggle("open")};veil.onclick=closeMenu;
